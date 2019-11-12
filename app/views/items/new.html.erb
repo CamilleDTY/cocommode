@@ -1,0 +1,22 @@
+<div class="container">
+  <%= simple_form_for(@item) do |f| %>
+    <%= f.input :category, label: "Categorie", collection: Item::CATEGORIES %>
+    <%= f.input :type, label: "Type", collection: Item::TYPES %>
+    <%= f.input :gender, label: "Genre", collection: Item::GENDERS %>
+    <%= f.input :color, label: "Couleur", collection: Item::COLORS %>
+    <%= f.input :size, label: "Taille", collection: Item::SIZES %>
+    <%= f.input :accessibility, label: "A qui voulez-vous prêter cet article ?", collection: Item::ACCESSIBILITIES %>
+    <%= f.input :description, label: "Description supplémentaire" %>
+    <%= f.input :exchange, label: "En échange...", collection: Item::EXCHANGES  %>
+    <%= f.input :cleaning, label: "Souhaitez-vous un passage en pressing avant restitution ?" %>
+    <%= f.input :guarantee, label: "Souhaitez-vous demander une caution ?", collection: Item::CAUTIONS %>
+    <%= f.input :contract, label: "Souhaitez-vous faire signer un contrat à l'emprunteur ?" %>
+    <%= f.submit "Prêter" %>
+  <% end %>
+</div>
+
+
+<!-- ajouter les inputs de photos :
+    t.string "main_picture"
+    t.string "second_picture"
+    t.string "third_picture" -->
