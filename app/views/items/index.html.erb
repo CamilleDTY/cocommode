@@ -1,11 +1,19 @@
 <div class="container">
-  <div>
+  <div class="d-flex align-items-center">
     <% @items.each do |item| %>
       <div>
-        <%= cl_image_tag item.main_picture, height: 280, width: 280, crop: :fill %>
-      </div>
-      <div>
-        <p> Taille: <%= item.size %> </p>
+        <div>
+          <%= cl_image_tag item.main_picture, height: 280, width: 280, crop: :fill %>
+        </div>
+        <div class="d-flex">
+          <div>
+            <p> Taille: <%= item.size %> </p>
+            <p> By <%= User.find(item.user_id).first_name.capitalize %> </p>
+          </div>
+          <div>
+            <%= cl_image_tag User.find(item.user_id).profile_picture, height: 30, width: 30, crop: :fill %>
+          </div>
+        </div>
       </div>
     <% end %>
   </div>
