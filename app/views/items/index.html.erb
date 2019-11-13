@@ -1,9 +1,9 @@
 <%= render '/components/top-navbar' %>
 
 <div class="container">
-  <div class="d-flex align-items-center">
+  <div class="d-flex cards align-items-center">
     <% @items.each do |item| %>
-      <div>
+      <div class="card">
         <div>
           <%= cl_image_tag item.main_picture, height: 280, width: 280, crop: :fill %>
         </div>
