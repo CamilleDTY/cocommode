@@ -1,3 +1,5 @@
+<%= render '/components/top-navbar' %>
+
 <div class="container">
   <div class="d-flex align-items-center">
     <% @items.each do |item| %>
@@ -11,7 +13,7 @@
             <p> By <%= User.find(item.user_id).first_name.capitalize %> </p>
           </div>
           <div>
-            <%= cl_image_tag User.find(item.user_id).profile_picture, height: 30, width: 30, crop: :fill %>
+            <%= cl_image_tag User.find(item.user_id).profile_picture, class:"avatar", height: 30, width: 30, crop: :fill %>
           </div>
         </div>
       </div>
