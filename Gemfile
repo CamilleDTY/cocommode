@@ -36,6 +36,7 @@ gem 'devise'
 gem 'pundit'
 gem 'pg_search', '~> 2.3.0'
 gem 'dotenv-rails'
+gem 'jquery-rails'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
