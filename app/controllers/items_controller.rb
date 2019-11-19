@@ -16,7 +16,9 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    @item.user = current_user
     @item.save
+    authorize @item
     redirect_to item_path(@item)
   end
 
@@ -39,7 +41,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:category,:type,:color,:size,:main_picture,:second_picture,:third_picture,:accessibility,:description,:gender,:exchange,:cleaning,:guarantee,:contract)
+    params.require(:item).permit(:category,:items_type,:color,:size,:main_picture,:second_picture,:third_picture,:accessibility,:description,:gender,:exchange,:cleaning,:guarantee,:contract)
   end
 
 end
