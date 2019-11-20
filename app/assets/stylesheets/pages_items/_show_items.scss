@@ -1,0 +1,65 @@
+.show_details {
+  margin-left : 40px;
+  flex-grow: 1;
+  position: relative;
+}
+
+.show_details h1 {
+  text-align: center;
+}
+
+.infos {
+  padding-left : 16px;
+}
+
+.show_details .main-btn-div {
+  max-width: 200px;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-btn-div .main-btn{
+  padding: 12px 20px;
+}
+
+.loaner div {
+  flex-grow: 1;
+  align-items: center;
+}
+
+.loaner p {
+  margin: 0;
+}
+
+.loaner_exchange p {
+  text-align: center;
+}
+
+.loaner_identity {
+  align-items: center;
+}
+
+.loaner_identity p {
+  padding-left: 16px;
+}
+
+.request {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.request i{
+  color: $first-color;
+  font-size: 20px;
+}
+
+.requests {
+  flex-direction: column;
+}
+
+.infos_requests {
+  justify-content: space-between;
+  margin: 40px 0;
+}
