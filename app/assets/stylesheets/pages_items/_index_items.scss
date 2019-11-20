@@ -1,8 +1,27 @@
+$first-color: #700039;
+$first-color-light: #700039;
+$second-color: #79B791;
+$second-color-light: #ABD1B5;
+
 .cards {
   flex-wrap: wrap;
 }
 
 .card {
   margin: 15px;
+}
 
+.card_info {
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.card_info div p {
+  padding: 0;
+}
+
+.card a:hover {
+  border: 4px solid $first-color;
+  opacity: 0.6;
+  margin: -4px;
 }
