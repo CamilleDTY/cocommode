@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_19_083354) do
+ActiveRecord::Schema.define(version: 2019_11_20_152720) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2019_11_19_083354) do
     t.string "gender"
     t.string "exchange"
     t.boolean "cleaning"
-    t.integer "guarantee"
+    t.string "guarantee"
     t.boolean "contract"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

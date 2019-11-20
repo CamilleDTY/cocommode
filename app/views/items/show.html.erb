@@ -1,0 +1,63 @@
+<%= render '/components/top-navbar' %>
+
+<div class="container">
+  <div class="d-flex show_card">
+    <div class="show_img">
+      <% if @item.main_picture %>
+        <%= cl_image_tag @item.main_picture, height: 500, width: 320, crop: :fill %>
+      <% end %>
+    </div>
+    <div class= "show_details">
+      <h1> <%= @item.items_type %> <%= @item.color %> (<%= @item.category %>) </h1>
+      <div class="loaner d-flex">
+        <div class="loaner_identity d-flex">
+          <!-- <div> -->
+            <%= cl_image_tag @item.user.profile_picture, class:"avatar"%>
+          <!-- </div> -->
+          <!-- <div> -->
+            <p> Prêté par <%= @item.user.first_name.capitalize %></p>
+          <!-- </div> -->
+        </div>
+        <div class="loaner_exchange">
+          <p> <i class="fas fa-exchange-alt"></i> En échange <br> <%= @item.exchange %> </p>
+        </div>
+      </div>
+      <div class="infos_requests d-flex">
+        <div class ="infos">
+          <p> Localisation : <%= @item.user.address %> </p>
+          <p> Taille : <%= @item.size %> </p>
+          <p> Couleur : <%= @item.color %> </p>
+          <% if @item.description != "" %>
+            <p> Bon à savoir : <%= @item.description %></p>
+          <% else %>
+            <p> <br> </p>
+          <% end %>
+        </div>
+        <div class ="requests d-flex">
+          <% if @item.contract %>
+            <div class="request">
+              <i class="fas fa-file-signature"></i>
+              <p> Contrat </p>
+            </div>
+          <% end %>
+          <% if @item.cleaning %>
+            <div class="request">
+              <i class="fas fa-tint"></i>
+              <p> Pressing </p>
+            </div>
+          <% end %>
+          <% if @item.guarantee != "Non" %>
+            <div class="request">
+              <i class="fas fa-euro-sign"></i>
+              <p> Caution : <%= @item.guarantee.last(3) %> </p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="main-btn-div">
+        <%= link_to "Je veux l'emprunter", new_item_path , class: "main-btn" %>
+      </div>
+    </div>
+  </div>
+
+</div>
