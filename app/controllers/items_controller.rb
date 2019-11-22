@@ -10,6 +10,13 @@ class ItemsController < ApplicationController
     authorize @item
   end
 
+  def loanrequest
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   def new
     @item = Item.new
     authorize @item

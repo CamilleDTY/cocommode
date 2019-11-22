@@ -14,3 +14,10 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+//= require jquery
+//= require popper
+//= require turbolinks
+
+//= require_tree
