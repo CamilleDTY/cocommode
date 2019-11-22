@@ -38,6 +38,9 @@ gem 'pg_search', '~> 2.3.0'
 gem 'dotenv-rails'
 gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
+gem 'popper_js'
+gem 'responders', '~> 3.0'
+gem 'bootstrap'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
