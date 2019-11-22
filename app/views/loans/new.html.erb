@@ -1,0 +1,8 @@
+<div class="container">
+  <%= simple_form_for [@item, @loan] do |f| %>
+    <%= f.input :message, label: "Votre message" %>
+    <%= f.input :start_date, label: "Date de début" %>
+    <%= f.input :end_date, label: "Date de fin" %>
+    <%= f.submit "Envoyer la demande" %>
+  <% end %>
+</div>

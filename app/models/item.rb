@@ -1,5 +1,6 @@
 class Item < ApplicationRecord
   belongs_to :user
+  has_many :loans
   mount_uploader :main_picture, PhotoUploader
   mount_uploader :second_picture, PhotoUploader
   mount_uploader :third_picture, PhotoUploader
